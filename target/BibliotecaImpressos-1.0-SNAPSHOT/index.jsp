@@ -11,13 +11,13 @@
   </head>
   <body>
 	<p>
-		<a href="autenticar.html">Autenticar</a>
+		<a href="autenticar.jsp">Autenticar</a>
 	</p>
 	<p>
-		<a href="pesquisar_folheto.html">Pesquisar folheto</a>
+		<a href="pesquisar_folheto.jsp">Pesquisar folheto</a>
 	</p>
 	<p>
-		<a href="montar_folheto.html">Montar folheto</a>
+		<a href="montar_folheto.jsp">Montar folheto</a>
 	</p>
 
     <!-- Optional JavaScript -->

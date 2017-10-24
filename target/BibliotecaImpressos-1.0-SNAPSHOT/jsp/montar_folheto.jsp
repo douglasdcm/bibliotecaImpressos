@@ -10,21 +10,23 @@
     <title>Montar folheto</title>
   </head>
   <body>
-    <h1>Montar folheto</h1>
-	<div>
-		<form>
-		  Nome:<br>
-		  <input id="nome" type="text">
-		  <br>
-		  Descriï¿½ï¿½o:<br>
-		  <input id="descricao" type="text">
-		  <br><br>
-		  <input onclick="criar_folheto()" id="criar_folhetos" type="submit" value="Criar folheto">
-		</form>
-		<h6 id="mensagem"></h6>
-	</div>
-	
-	<a href="index.html">Pï¿½gina inicial</a>
+        <div class="container">
+            <h1>Montar folheto</h1>
+            <!--div -->
+                    <form>
+                      Nome:<br>
+                      <input id="nome" type="text">
+                      <br>
+                      Descrição:<br>
+                      <input id="descricao" type="text">
+                      <br><br>
+                      <input onclick="criar_folheto()" id="criar_folhetos" type="submit" value="Criar folheto">
+                    </form>
+                    <h6 id="mensagem"></h6>
+            <!-- /div -->
+
+            <a href="index.html">Página inicial</a>
+        </div> <!-- div container -->
 
 	<script src="montar_folheto.js"></script>
 	<script src="chance.js"></script>
