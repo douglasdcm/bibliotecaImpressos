@@ -38,7 +38,7 @@
 				-->
 				<button class="btn btn-lg btn-primary btn-block" type="submit">Logar</button>
 			</form>
-			<a href="index.html">P�gina inicial</a>
+			<a href="..\index.html">P�gina inicial</a>
 	</div> <!-- div container -->
 	
 	<script src="autenticar.js"></script>
