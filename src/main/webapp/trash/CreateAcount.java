@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.dcs.test;
+package com.dcs.htmlunit;
 
 import java.util.concurrent.TimeUnit;
 import org.junit.After;

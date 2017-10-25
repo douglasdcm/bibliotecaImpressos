@@ -1,4 +1,4 @@
-package com.dcs.test;
+package com.dcs.htmlunit;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

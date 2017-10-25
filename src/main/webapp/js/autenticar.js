@@ -3,13 +3,13 @@ function validar_login() {
 	var senha = document.getElementById('senha').value;
 	
 	//alert(chave);
-	if (chave == "") {
+	if (chave === "") {
 		alert("Preencha a chave.");
-	} else if (senha == "") {
+	} else if (senha === "") {
 		alert("Preencha a senha.");
 	} else {
-		//TODO validaÁ„o
-		//caso o login ou senha nao seja valido, informar que login e snha s„o invalidos
+		//TODO valida√ß√£o
+		//caso o login ou senha nao seja valido, informar que login e senha s√£o inv√°lidos
 		alert("Campos preenchidos");
 	}
 }
