@@ -35,9 +35,9 @@ public class SeleniumTest {
     public void setUpClass() throws Exception {
        System.setProperty("webdriver.gecko.driver", "/home/douglas/dcs/gcs/geckodriver");
        driver = new FirefoxDriver();
-       baseUrl = "http://localhost:8080/BibliotecaImpressos/index.jsp";
-       //driver.manage().window().maximize();
-       //driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+       baseUrl = "http://127.0.0.1:41107";
+       driver.manage().window().maximize();
+       driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
     
     @After
@@ -49,6 +49,7 @@ public class SeleniumTest {
     public void tearMainClass() throws Exception {
         driver.get(baseUrl);
         driver.findElement(By.linkText("Montar folheto")).click();
+        driver.findElement(By.linkText("Página inicial")).click();
     }
 
 }

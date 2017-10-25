@@ -23,7 +23,7 @@
 			</form> 
 			-->
 			
-			<form class="form-signin">
+			<form id="autenticar" class="form-signin">
 				<h2 class="form-signin-heading">Autenticação</h2>
 				<label for="chave" class="sr-only">Chave</label>
 				<input type="text" id="chave" class="form-control" placeholder="Informe sua chave de usuário" required autofocus>
@@ -36,8 +36,9 @@
 				  </label>
 				</div>
 				-->
-				<button class="btn btn-lg btn-primary btn-block" type="submit">Logar</button>
+				<button class="btn btn-lg btn-primary btn-block" type="submit" onclick="document.getElementById('mensagem').innerHTML = 'Logado'">Logar</button>
 			</form>
+                        <div id="mensagem"></div>
 			<a href="..\index.html">Página inicial</a>
 	</div> <!-- div container -->
 	
