@@ -35,7 +35,7 @@ public class SeleniumTest {
     public void setUpClass() throws Exception {
        System.setProperty("webdriver.gecko.driver", "/home/douglas/dcs/gcs/geckodriver");
        driver = new FirefoxDriver();
-       baseUrl = "http://127.0.0.1:41107";
+       baseUrl = "http://127.0.0.1:8080";
        driver.manage().window().maximize();
        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
