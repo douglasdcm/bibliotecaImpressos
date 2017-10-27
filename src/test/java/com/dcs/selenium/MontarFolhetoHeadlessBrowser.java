@@ -13,6 +13,8 @@ import org.junit.Test;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -30,8 +32,14 @@ public class MontarFolhetoHeadlessBrowser {
     @Before
     public void setUpClass() throws Exception {
        //System.setProperty("webdriver.gecko.driver", "/home/douglas/dcs/gcs/geckodriver");
+       System.setProperty("webdriver.chrome.driver", "/home/douglas/dcs/gcs/chromedriver");
        //driver = new FirefoxDriver();
-       driver = new HtmlUnitDriver();
+       // Add options to Google Chrome. The window-size is important for responsive sites
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("headless");
+        options.addArguments("window-size=1200x600");
+        driver = new ChromeDriver(options);
+       //driver = new HtmlUnitDriver();
        //baseUrl = "http://127.0.0.1:8080";
        baseUrl = "http://bibliotecaimpressos.surge.sh";
        //driver.manage().window().maximize();
@@ -47,16 +55,12 @@ public class MontarFolhetoHeadlessBrowser {
     public void tearMainClass() throws Exception {
         driver.get(baseUrl);
         driver.findElement(By.linkText("Montar folheto")).click();
-        String url = driver.getCurrentUrl().replace("%5C", "/");
-        driver.get(url);
         Assert.assertEquals("Montar folheto", driver.getTitle());
         
         driver.findElement(By.id("nome")).sendKeys("testSelenium");
         driver.findElement(By.id("descricao")).sendKeys("testSelenium desc");        
         driver.findElement(By.id("criar_folhetos")).click();
-        url = driver.getCurrentUrl().replace("%5C", "/");
-        driver.get(url);
-        /*
+        
         try{
                 //Wait 10 seconds till alert is present
                 WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -71,10 +75,7 @@ public class MontarFolhetoHeadlessBrowser {
                 //System.out.println("Accepted the alert successfully.");
              }catch(Throwable e){
                 System.err.println("Error came while waiting for the alert popup. "+e.getMessage());
-             }*/
-        
-        String mensagem = driver.findElement(By.id("mensagem")).getText();
-                Assert.assertEquals("Novo rascunho criado.", mensagem);
+             }
         
     }
     
