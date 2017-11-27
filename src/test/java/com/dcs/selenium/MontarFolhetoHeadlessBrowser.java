@@ -40,8 +40,8 @@ public class MontarFolhetoHeadlessBrowser {
         options.addArguments("window-size=1200x600");
         driver = new ChromeDriver(options);
        //driver = new HtmlUnitDriver();
-       //baseUrl = "http://127.0.0.1:8080";
-       baseUrl = "http://bibliotecaimpressos.surge.sh";
+       baseUrl = "http://127.0.0.1:8080";
+       //baseUrl = "http://bibliotecaimpressos.surge.sh";
        //driver.manage().window().maximize();
        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }

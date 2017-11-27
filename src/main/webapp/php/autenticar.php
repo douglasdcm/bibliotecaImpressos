@@ -1,4 +1,43 @@
-﻿<!DOCTYPE html>
+<?php
+
+$host="localhost";
+$user="root";
+$password="admin";
+$db="biblioteca_impressos";
+
+$con=mysqli_connect($host, $user, $password, $db);
+//mysqli_select_db($con);
+
+//echo "form ".$_POST['chave']." ".$_POST['senha']."";
+
+if(isset($_POST['chave'])){
+    
+    $uname=$_POST['chave'];
+    $password=$_POST['senha'];
+    $sql="select * from login where chave='".$uname."' and senha='".$password."'";
+    
+    //echo "sql".$sql."\n";
+    
+    $result=mysqli_query($con, $sql);
+    
+    //echo "result".$result."\n";
+    
+    //echo "num_rows".mysqli_num_rows($result)."\n";
+    
+    if(mysqli_num_rows($result)==1){
+        echo " You have successfully logged in";
+        exit();
+    }else{
+        echo " You entered incorrect password";
+        exit();
+    }
+//}else{
+//    echo "POST failed";
+}
+
+?>
+
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -23,12 +62,13 @@
 			</form> 
 			-->
 			
-			<form id="autenticar" class="form-signin" method="POST" action="#">
+                        <!--form id="autenticar" class="form-signin" method="POST" action="#"-->
+                        <form id="autenticar" method="POST" action="#">
 				<h2 class="form-signin-heading">Autenticação</h2>
 				<label for="chave" class="sr-only">Chave</label>
-				<input type="text" id="chave" class="form-control" placeholder="Informe sua chave de usuário" required autofocus>
+				<input type="text" name="chave" id="chave" class="form-control" placeholder="Informe sua chave de usuário" required autofocus>
 				<label for="senha" class="sr-only">Senha</label>
-				<input type="password" id="senha" class="form-control" placeholder="Senha" required>
+				<input type="password" name="senha" id="senha" class="form-control" placeholder="Senha" required>
 				<!--
 				<div class="checkbox">
 				  <label>
@@ -36,7 +76,8 @@
 				  </label>
 				</div>
 				-->
-				<button id="logar" class="btn btn-lg btn-primary btn-block" type="submit" onclick="document.getElementById('mensagem').innerHTML = 'Logado'">Logar</button>
+				<!--button id="logar" class="btn btn-lg btn-primary btn-block" type="submit" onclick="document.getElementById('mensagem').innerHTML = 'Logado'">Logar</button-->
+                                <button id="logar" type="submit" onclick="document.getElementById('mensagem').innerHTML = 'Logado'">Logar</button>
 			</form>
                         <div id="mensagem"></div>
 			<a href="..\index.html">Página inicial</a>

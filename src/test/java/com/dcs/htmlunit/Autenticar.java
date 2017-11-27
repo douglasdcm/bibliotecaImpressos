@@ -24,8 +24,9 @@ import org.junit.Test;
 
 import net.sourceforge.jwebunit.util.TestingEngineRegistry;
 import org.junit.Assert;
+import org.junit.Ignore;
 
-
+@Ignore
 public class Autenticar {
     
     /*

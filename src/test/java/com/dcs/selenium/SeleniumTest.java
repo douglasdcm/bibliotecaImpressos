@@ -48,8 +48,8 @@ public class SeleniumTest {
     @Test
     public void tearMainClass() throws Exception {
         driver.get(baseUrl);
-        driver.findElement(By.linkText("Montar folheto")).click();
-        driver.findElement(By.linkText("Página inicial")).click();
+        //driver.findElement(By.linkText("Montar folheto")).click();
+        //driver.findElement(By.linkText("Página inicial")).click();
     }
 
 }

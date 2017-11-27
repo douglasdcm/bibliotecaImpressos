@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -21,6 +22,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  *
  * @author douglas
  */
+
+@Ignore
 public class MontarFolheto {
     
    private WebDriver driver;
